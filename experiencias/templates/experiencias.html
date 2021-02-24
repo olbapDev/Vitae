@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block tittle%}Experiencias{% endblock %}
+
+{% block content %}
+
+<ul>
+    {% for exp in object_list %}
+        <ul class="container">
+            
+            <li><h2><strong>{{exp.nameEmpresa}}</strong></h2></li>
+            <h6><strong>Cargo:</strong> {{exp.cargo}}</h6>
+            <div class="container">
+                <small>
+                <h1>hola</h1>
+                    <p>
+                        {{ exp.descripcion }}
+                    </p>
+                </small>
+
+            </div>
+        </ul>
+        <hr>
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}

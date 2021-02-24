@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% block tittle%}Intereses{% endblock %}
+
+{% block content %}
+<ul>
+    {% for inte in object_list %}
+        <ul class="container">
+            
+            <li><h2><strong>{{inte.tittle}}</strong></h2></li>
+            <div class="container">
+                <small>
+                    <p>
+                        {{ inte.nota }}
+                    </p>
+                </small>
+
+            </div>
+        </ul>
+        <hr>
+    {% endfor %}
+</ul>
+
+{% endblock %}

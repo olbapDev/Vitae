@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+{% block tittle%}Conocimientos{% endblock %}
+
+{% block content %}
+
+<ul>
+    {% for conoc in object_list %}
+        <ul class="container">
+            
+            <li><h2><strong>{{conoc.nombre}}</strong></h2></li>
+            <h6><strong>Nivel:</strong> {{conoc.nivel}}</h6>
+            <div class="container">
+                <small>
+                    <p>
+                        {{ conoc.descripcion }}
+                    </p>
+                </small>
+
+            </div>
+        </ul>
+        <hr>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

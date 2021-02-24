@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block tittle%}Home{% endblock %}
+
+{% block content %}
+<hr/>
+<div class="container">
+    <div class="card">
+        <img src="{% static 'core/img/foto.jpg'%}" style="width: 18rem;" class="card-img-top container" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Presentacion</h5>
+            <p > 
+                Tengo conocimiento que no es la pagina web mas bonita pero esto demuestra que puedo realizar un proyecto funcional que guarda en la base de datos sqlite.
+                La foto no es la mas profesional pero es la unica que tengo a mano a esta hora.
+
+                Para ser sincero desarrolle esta app durante la noche debido a que no habia creado ningun cv para mostrar. 
+            </p>
+            <a href="{% url 'conocimiento'%}" class="btn btn-secondary">Conocimientos</a>
+        </div>
+    </div> 
+
+</div>
+{% endblock %}
+
