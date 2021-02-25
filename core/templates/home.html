@@ -19,12 +19,27 @@
 
                 Para ser sincero desarrolle esta app durante la noche debido a que no habia creado ningun cv para mostrar. 
             </p>
-            <a href="{% url 'conocimiento'%}" class="btn btn-primary">Conocimientos</a>
+            <a href="{% url 'conocimiento'%}" class="btn btn-secondary">Conocimientos</a>
         </div>
     </div> 
 
 </div>
 <br/>
+<hr/> 
+<h1 class="container">Proyectos</h1>
+
+<div class="card container" style="width: 5000px;">
+    {% for p in proyectos %}
+    <div class="card-body">
+        <h3 class="card-title">{{ p.titulo }}</h3>
+        <h5 class="card-title">{{ p.lenguaje }}</h5>
+
+        <p class="card-text">{{ p.descripcion }}</p>
+        <a href="{{p.link}}" class="btn btn-secondary">{{ p.link }}</a>
+    </div>
+    <hr>
+    {% endfor %}
+</div>
 
 <br/>
 <br/>
