@@ -7,4 +7,4 @@ class Experiencia(models.Model):
     descripcion= models.TextField()
 
     def __str__(self):
-        return self.nameEmpresa + ' | ' + self.cargo
+        return self.nameEmpresa 

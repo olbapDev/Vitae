@@ -18,6 +18,9 @@
                     </p>
                 </small>
             </div>
+            {% if proj.image %}
+                <img src="{{ proj.image.url }}" style="width: 400px;" class="card-img-top container" alt="...">
+            {% endif %}
         </ul>
         <hr>
     {% endfor %}

@@ -1,0 +1,6 @@
+django
+pillow
+django-admin-interface
+
+
+#esto es para buenas practicas

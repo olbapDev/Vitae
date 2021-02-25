@@ -5,9 +5,11 @@
 {% block tittle%}Home{% endblock %}
 
 {% block content %}
-<hr/>
+
 <div class="container">
     <div class="card">
+        <br/>
+
         <img src="{% static 'core/img/foto.jpg'%}" style="width: 18rem;" class="card-img-top container" alt="...">
         <div class="card-body">
             <h5 class="card-title">Presentacion</h5>
@@ -17,10 +19,18 @@
 
                 Para ser sincero desarrolle esta app durante la noche debido a que no habia creado ningun cv para mostrar. 
             </p>
-            <a href="{% url 'conocimiento'%}" class="btn btn-secondary">Conocimientos</a>
+            <a href="{% url 'conocimiento'%}" class="btn btn-primary">Conocimientos</a>
         </div>
     </div> 
 
 </div>
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+
+
 {% endblock %}
 

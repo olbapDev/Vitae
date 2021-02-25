@@ -6,6 +6,7 @@ class Project(models.Model):
     lenguaje = models.CharField(max_length=100)
     descripcion = models.TextField()
     link = models.CharField(max_length=500)
+    image = models.ImageField(upload_to='projects', null=True, blank=True)
 
     def __str__(self):
-        return self.titulo + ' | ' + self.lenguaje + ' | '
+        return self.titulo + ' | '
