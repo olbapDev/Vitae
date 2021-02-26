@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'conocimiento.apps.ConocimientoConfig',
     'interesting.apps.InterestingConfig',
     'colorfield',
+    'contacto',
 ]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -128,10 +129,24 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 #URL para acceder a las img subidas
 MEDIA_URL = '/media/'
 #URL donde quedan almacenadas las img
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+#EMAIL SETTINGS
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USERT = 'pablo.garrido.cid@gmail.com'
+EMAIL_HOST_PASSWORD = '*****'
+EMAIL_USE_TLS = False
+#EMAIL_USE_SSH = False
+
+#python -m smtpd -n -c DebuggingServer localhost:1025
 
 
