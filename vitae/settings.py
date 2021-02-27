@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'vitae.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',         
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
@@ -142,8 +142,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
-EMAIL_HOST_USERT = 'pablo.garrido.cid@gmail.com'
-EMAIL_HOST_PASSWORD = '*****'
+EMAIL_HOST_USERT = 'pablo.garrido.djangopage@gmail.com'
+EMAIL_HOST_PASSWORD = 'DjangoPabloPage123'
 EMAIL_USE_TLS = False
 #EMAIL_USE_SSH = False
 
