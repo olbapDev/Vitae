@@ -3,87 +3,68 @@
 {% block tittle %}Contactame!{% endblock %}
 
 {% block content %}
-        {% comment %} 
-            {% if message_name  %}
-                <div class="container">
-                    <div class="col-12">
-                        <h1>{{ message_name }} tu mensaje fue enviado con exito!</h1>
+
+
+    <div class="container">
+
+        <header class="section-header">
+        
+        <p>Contactame</p>
+        </header>
+
+        <div class="row gy-4">
+            <div class="col-lg-6">
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <i class="bi bi-geo-alt"></i>
+                            <h3>Dirección</h3>
+                            <p>Alberto blest gana # 756<br>El Bosque, Santiago.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <i class="bi bi-telephone"></i>
+                            <h3>Teléfono</h3>
+                            <p>+56954013329</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <i class="bi bi-envelope"></i>
+                            <h3>Envíame un email</h3>
+                            <p>pa.garrido.cid@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box">
+                        <i class="bi bi-clock"></i>
+                        <h3>Disponibilidad</h3>
+                        <p><strong>Inmediata</strong></p>
+                        </div>
                     </div>
                 </div>
-                <hr>
-            {% endif %} 
-        {% endcomment %}
-    {% comment %} {% if {{ contact.name}} %} {% endcomment %}
 
-
-
-        {% comment %} 
-            <center>
-            <h2>
-                gracias por contactarte {{ message_name }} !
-            </h2>
-            <p> pronto tendrás una respuesta !</p>
-            </center>
-            <br/><br/><br/> 
-        {% endcomment %}
-    {% comment %} {% else %} {% endcomment %}
-
-        {% comment %} <div class="container">
-            <form action="{% url 'contacto' %}" method="POST">
-                {% csrf_token %}
-                <div class="row">
-                    <div class="col-lg-6">
-                        <input type="text" name="message-name" class="form-control mb-30" placeholder="Tu nombre ...">
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="email" name="message-email" class="form-control mb-30" placeholder="Tu email para mantener contacto ...">
-                    </div>
-                    <div class="col-lg-12">
-                        <textarea name="message" class="form-control mb-30" placeholder="Dejame tu lindo mensaje ..."></textarea>
-                    </div>
-                    <div class="col-lg-12">
-                        <button id="btn-form" type="submit" class="btn btn-secondary">Enviar !</button>
-                    </div>
-                </div>
-                
-            </form>
-        </div> {% endcomment %}
-
-    {% comment %} {% endif %} {% endcomment %}
-
-    <div class="form-control">
-            <form method='POST'>
-                {% csrf_token %}
-                {{form.as_p}}
-                <center><button class="btn btn-secondary">Enviar</button></center>
-
-            <br/>
-        
-
-        
-    </div>
-{% endblock %}
-{% comment %}  
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="mb-100">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13297.946893575969!2d-70.68189585751857!3d-33.56670984234293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dbcc64fcdee5%3A0x6e1653b9b7a1b3c7!2sAlberto%20Blest%20Gana%20756%2C%20El%20Bosque%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1614294068173!5m2!1ses!2scl" allowfullscreen></iframe>
             </div>
+
+            <div class="col-lg-6">
+                <div class="form-control">
+                        <form method='POST'>
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <center><button class="btn btn-secondary">Enviar</button></center>
+
+                        <br/>
+                    
+
+                    
+                </div>
+
+            </div>
+
         </div>
+
     </div>
-</div>
-{% endcomment %}
 
-
-{% comment %}  formulario basico con un input de msj
-
-    <form class="container" method="POST" action="{% url 'home' %}">
-        {% csrf_token %}
-        <textarea name="message" 
-            placeholder="Escribe tu mensaje y detalla tus datos de contacto como el correo y el telefono">
-        </textarea>
-        <input type="submit"/>
-    </form>
-{% endcomment %}
-
+    
+{% endblock %}

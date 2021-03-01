@@ -5,46 +5,62 @@
 {% block tittle%}Home{% endblock %}
 
 {% block content %}
+<!-- ======= Header ======= -->
 
-<div class="container">
-    <div class="card">
-        <br/>
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center">
 
-        <div class="card-body">
-            <h5 class="card-title">Presentacion</h5>
-            <p > 
-                Tengo conocimiento que no es la pagina web mas bonita pero esto demuestra que puedo realizar un proyecto funcional que guarda en la base de datos sqlite.
-                La foto no es la mas profesional pero es la unica que tengo a mano a esta hora.
-
-                Para ser sincero desarrolle esta app durante la noche debido a que no habia creado ningun cv para mostrar. 
-            </p>
-            <a href="{% url 'conocimiento'%}" class="btn btn-secondary">Conocimientos</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <h1 data-aos="fade-up">FullStack Developer</h1>
+                <h2 data-aos="fade-up" data-aos-delay="400">Tengo conocimiento de lenguajes de desarrollo web y escritorio, también conozco Frameworks tales como:  Django, ReactJS y Angular (básico)</h2>
+                <div data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-center text-lg-start">
+                    <a href="https://github.com/olbapDev/" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                        <span>GitHub</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="{% static 'assets/img/logo-pg-principal.png' %}" class="img-fluid" alt="">
+                </div>
+            </div>
         </div>
-    </div> 
 
-</div>
-<br/>
-<hr/> 
-<h1 class="container">Proyectos</h1>
+    </section><!-- End Hero -->
 
-<div class="card container" style="width: 5000px;">
-    {% for p in proyectos %}
-    <div class="card-body">
-        <h3 class="card-title">{{ p.titulo }}</h3>
-        <h5 class="card-title">{{ p.lenguaje }}</h5>
+<!-- ======= About Section ======= -->
+        <section id="about" class="about">
 
-        <p class="card-text">{{ p.descripcion }}</p>
-        <a href="{{p.link}}" class="btn btn-secondary">{{ p.link }}</a>
-    </div>
-    <hr>
-    {% endfor %}
-</div>
+            <div class="container" data-aos="fade-up">
+                <div class="row gx-0">
 
-<br/>
-<br/>
-<br/>
+                <div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content">
+                        <h2>Información sobre mi</h2>
+                        <p>
+                            Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+                        </p>
+                        <div class="text-center text-lg-start">
+                            <a href="{% url 'interes' %}" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                            <span>Intereses</span>
+                            <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
 
+                </div>
+            </div>
+
+        </section><!-- End About Section -->
 
 {% endblock %}
 

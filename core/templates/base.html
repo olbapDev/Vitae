@@ -1,105 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>Vitae | | {% block tittle%}{% endblock %}</title>
+    <title>PGC || {% block tittle %}{% endblock %}</title>
+    <meta content="" name="description">
+
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    {% comment %}con este icon puedes poner el de makers {% endcomment %}
+    <link href="{% static 'assets/img/icon-page-me.ico' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css'%}" rel="stylesheet">
+
+
     </head>
-    <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">Presentación</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'conocimiento'%}">Conocimientos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'interes' %}">Intereses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'experiencia'%}">Experiencias </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'proyecto' %}">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
-                    </li>
+<body>
+
+    <header id="header" class="header fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+            <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+                <span>Pablo Garrido Cid</span>
+            </a>
+
+            <nav id="navbar" class="navbar navbar-expand-lg ">
+                <ul>
+                    <li><a class="nav-link scrollto" href="{% url 'conocimiento' %}">Conocimientos</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'proyecto' %}">Proyectos</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'interes' %}">Interés</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'contacto' %}">Contacto</a></li>
+
+
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <br/>
+<br/>
+<br/>
+
+
+<br/>
+
+
+
+        {% block content %}
+        {% endblock %}
+        <!-- ======= Contact Section ======= -->
+        
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+
+        <div class="footer-top">
+        <div class="container">
+            <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-info">
+                <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+                
+                    <span>Pablo Garrido Cid</span>
+                </a>
+                <p>Social</p>
+                <div class="social-links mt-3">
+                    <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-6 footer-links">
+                <h4>Links</h4>
+                <ul>
+                <li><i class="bi bi-chevron-right"></i> <a href="//github.com/olbapDev/">GitHub</a></li>
                 </ul>
             </div>
+
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                <h4>Contáctame</h4>
+                <p>
+                <strong>Teléfono:</strong> +56954013329<br>
+                <strong>Email:</strong> pa.garrido.cid@gmail.com<br>
+                </p>
+
+            </div>
+
+            </div>
         </div>
-    </nav>
-    </br>
-    {% block content %}
+        </div>
 
-    {% endblock %}
-
-    <br/>
-    
-
-
-    <section class="contact-section ">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center text-white bg-dark">
-                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Dirección</h4>
-                            <hr class="my-4" />
-                            <div class="small text-white-50">Alberto Blest Gana #756, El Bosque, Santiago</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center text-white bg-dark">
-                            <i class="fas fa-envelope text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Email</h4>
-                            <hr class="my-4" />
-                            <div class="small text-white-50"><p>pa.garrido.cid@gmail.com</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center text-white bg-dark">
-                            <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Teléfono</h4>
-                            <hr class="my-4" />
-                            <div class="small text-white-50">+569 54013329</div>
-                        </div>
-                    </div>
-                </div>
-            </div>    
+        <div class="copyright">
+            &copy; Copyright <strong><span>Pablo Garrido Cid</span></strong>. All Rights Reserved
         </div>
-    </section>
-    <!-- Optional JavaScript; choose one of the two! -->
-      <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-        <p class="m-0 text-center text-white">Pablo Garrido &copy; Mi CV 2021</p>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
-        <!-- /.container -->
-    </footer>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        </div>
+    </footer><!-- End Footer -->
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    -->
-    </body>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
 </html>
-

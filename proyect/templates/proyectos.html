@@ -3,28 +3,50 @@
 
 {% block tittle%}Proyectos{% endblock %}
 
+
+<br/>
+<br/>
+<br/>
+
+
+
+
 {% block content %}
-<ul>
-    {% for proj in object_list %}
-        <ul class="container">
-            <!-- Pernogom -->
-            <li><h2><strong>{{proj.titulo}}</strong></h2></li>
-            <h6><strong>Lenguaje:</strong> {{proj.lenguaje}}</h6>
-            <h6><strong>Link:</strong> {{proj.link}}</h6>
-            <div class="container">
+
+    
+      <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        {% for proj in object_list %}
+          <div class="row gy-4">
+
+    
+            <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+
+            <div class="col-lg-12">
+              <div class="portfolio-info">
+                <h3><strong>{{proj.titulo}}</strong></h3>
+                <ul>
+                  <li><strong>Lenguaje</strong>: {{proj.lenguaje}}</li>
+                  <li><strong>Proyecto URL</strong>: <a class="btn btn-secondary"href="{{proj.link}}">{{proj.link}}</a></li>
+                </ul>
                 <small>
-                    <p>
-                        {{ proj.descripcion }}
-                    </p>
-                </small>
+                      <p>
+                          {{ proj.descripcion }}
+                      </p>
+                  </small>
+                  <br/>
+                {% if proj.image %}
+                  <center><img src="{{ proj.image.url }}" style="width: 400px;" class="card-img-top container" alt="..."></center>
+                {% endif %}
+              </div>
+            
             </div>
-            {% if proj.image %}
-                <img src="{{ proj.image.url }}" style="width: 400px;" class="card-img-top container" alt="...">
-            {% endif %}
-        </ul>
-        <hr>
-    {% endfor %}
-</ul>
+
+          </div>
+        {% endfor %}
+      </div>
+    </section><!-- End Portfolio Details Section -->
 
 
 {% endblock %}

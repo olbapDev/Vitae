@@ -4,22 +4,42 @@
 {% block tittle%}Intereses{% endblock %}
 
 {% block content %}
-<ul>
-    {% for inte in object_list %}
-        <ul class="container">
-            
-            <li><h2><strong>{{inte.tittle}}</strong></h2></li>
-            <div class="container">
-                <small>
-                    <p>
-                        {{ inte.nota }}
-                    </p>
-                </small>
 
+<!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing">
+    <header class="section-header">
+        <p>Mis intereses </p>
+    </header>
+    <div class="container" data-aos="fade-up">
+        {% for inte in object_list %}
+        
+
+            <div class="row gy-4" data-aos="fade-left">
+
+                <div class="col-lg-12" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="box">
+                        <h3 style="color: #07d5c0;">{{inte.tittle}}</h3>
+                        
+                        <i class="ri-chat-check-line icon"></i>
+
+                        <ul>
+                            <li>{{inte.nota}}</li>
+                        </ul>
+                    
+                    </div>
+                </div>
+                
             </div>
-        </ul>
-        <hr>
-    {% endfor %}
-</ul>
+            <br/>
+        {% endfor %}
+
+    </div>
+
+</section><!-- End Pricing Section -->
+
+
+   
+
 
 {% endblock %}
+
