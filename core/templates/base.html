@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>PGC || {% block tittle %}{% endblock %}</title>
+    <title>PGC | {% block tittle %}{% endblock %}</title>
     <meta content="" name="description">
 
     <meta content="" name="keywords">
@@ -46,6 +46,7 @@
                 <ul>
                     <li><a class="nav-link scrollto" href="{% url 'conocimiento' %}">Conocimientos</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'proyecto' %}">Proyectos</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'experiencia' %}">Experiencias</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'interes' %}">Interés</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'contacto' %}">Contacto</a></li>
 
@@ -62,11 +63,9 @@
     <main id="main">
 
         <br/>
-<br/>
-<br/>
-
-
-<br/>
+        <br/>
+        <br/>
+        <br/>
 
 
 
@@ -89,9 +88,9 @@
                 
                     <span>Pablo Garrido Cid</span>
                 </a>
-                <p>Social</p>
-                <div class="social-links mt-3">
-                    <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
+                <p>Instagram de imperiones 3D</p>
+                <div class="align-items-center social-links mt-3">
+                    <a href="https://www.instagram.com/makers_chile/" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
                 </div>
             </div>
 
@@ -124,7 +123,7 @@
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="https://bootstrapmade.com/">bootstrapMade</a> modificado por <a href="{% url 'home' %}"><strong>mi</strong></a>
         </div>
         </div>
     </footer><!-- End Footer -->

@@ -7,7 +7,7 @@ class ContactForm(forms.ModelForm):
         model = Contacto
         fields =('name','correo','mensaje')
         widgets ={
-            'name': forms.TextInput(attrs={'class': 'form-control','placeholder':'Tu hermoso nombre' }),
-            'correo': forms.TextInput(attrs={'class': 'form-control'}),
-            'mensaje': forms.Textarea(attrs={'class': 'form-control'}),
+            'name': forms.TextInput(attrs={'class': 'form-control','placeholder':'Tu nombre' }),
+            'correo': forms.TextInput(attrs={'class': 'form-control','placeholder':'Correo de contacto'}),
+            'mensaje': forms.Textarea(attrs={'class': 'form-control','placeholder':'Mensaje...'}),
         }

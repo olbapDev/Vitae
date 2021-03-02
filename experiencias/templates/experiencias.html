@@ -4,26 +4,40 @@
 {% block tittle%}Experiencias{% endblock %}
 
 {% block content %}
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
 
-<ul>
-    {% for exp in object_list %}
-        <ul class="container">
+    <div class="container" data-aos="fade-up">
+        <header class="section-header">   
+            <p>Experiencia laboral</p>
+        </header>
+        <div class="row gy-4">
+            {% for exp in object_list %}
+                <div class="col-lg-12  align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                        <div class="member-img">
+                            <div class="social">
+                                <a href="{{exp.page}}"><i class="bi bi-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>{{exp.nameEmpresa}}</h4>
+                            <span>Cargo: {{exp.cargo}}</span>
+                            <span><a href="{{exp.page}}">Pagina oficial de la empresa</a></span>
+
+                            <p>{{exp.descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
             
-            <li><h2><strong>{{exp.nameEmpresa}}</strong></h2></li>
-            <h6><strong>Cargo:</strong> {{exp.cargo}}</h6>
-            <div class="container">
-                <small>
-                    <p>
-                        {{ exp.descripcion }}
-                    </p>
-                </small>
+        </div>
+    </div>
 
-            </div>
-        </ul>
-        <hr>
-    {% endfor %}
-</ul>
+</section><!-- End Team Section -->
 
 
 
 {% endblock %}
+
+
