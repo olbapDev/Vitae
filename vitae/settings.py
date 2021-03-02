@@ -140,11 +140,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #EMAIL SETTINGS
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USERT = 'pablo.garrido.djangopage@gmail.com'
-EMAIL_HOST_PASSWORD = 'DjangoPabloPage123'
-EMAIL_USE_TLS = False
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_PORT = '587'
+#EMAIL_HOST_USERT = ''
+#EMAIL_HOST_PASSWORD = ''
+#EMAIL_USE_TLS = False
 #EMAIL_USE_SSH = False
 
 #python -m smtpd -n -c DebuggingServer localhost:1025
